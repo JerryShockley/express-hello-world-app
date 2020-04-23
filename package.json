@@ -1,0 +1,27 @@
+{
+  "name": "hello-world",
+  "version": "1.0.0",
+  "description": "Sample App",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JerryShockley/express-hello-world-app.git"
+  },
+  "keywords": [
+    "sample",
+    "node",
+    "express"
+  ],
+  "author": "Jerry Shockley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JerryShockley/express-hello-world-app/issues"
+  },
+  "homepage": "https://github.com/JerryShockley/express-hello-world-app#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0"
+  }
+}
