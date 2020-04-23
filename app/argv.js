@@ -13,11 +13,12 @@
  *  Returns:  If the key exists and it has a non-empty value, then
  *            that value is returned. Otherwise false is returned.
  */
-exports.findArgvValue = (key, argv) => {
-  arg = findParameterKey(key, argv)
+const findArgvValue = (key, argv) => {
+  let arg = findParameterKey(key, argv)
+  let result = null
   if (arg) { // We found our key
    // Split the key-value pair (e.g. 'port=80' => ['port', '80'])
-    splitArgs = arg.split('=')
+    let splitArgs = arg.split('=')
     // Test if a value exists for the key.
     result = (splitArgs.length === 2)  ?  splitArgs[1] : false
   } else { // We didn't find our key
@@ -30,9 +31,8 @@ exports.findArgvValue = (key, argv) => {
 // it exists, otherwise it returns null. Note the parameter
 // must be of the form: <key>=<value>.
 function findParameterKey(key, argv, startAt=2) {
-  largv = argv.slice(startAt) // 1st 2 elements aren't params
-  regex = new RegExp(`^${key}=`)
-  result = largv.find(element => element.match(regex))
-  return result
+  let largv = argv.slice(startAt) // 1st 2 elements aren't params
+  let regex = new RegExp(`^${key}=`)
+  return largv.find(element => element.match(regex))
 }
-
+module.exports = findArgvValue
