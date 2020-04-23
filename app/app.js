@@ -2,7 +2,7 @@
 //
 // @see http://howtonode.org/getting-started-with-express
 // Finds the value associated with a key in the argv array.
-const findArgvValue = require('argv')
+const findArgvValue = require('./argv')
  // Load the express module.
 const express = require('express'),
     app = express(),

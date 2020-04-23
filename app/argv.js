@@ -13,7 +13,7 @@
  *  Returns:  If the key exists and it has a non-empty value, then
  *            that value is returned. Otherwise false is returned.
  */
-function findArgvValue(key, argv) {
+exports.findArgvValue = (key, argv) => {
   arg = findParameterKey(key, argv)
   if (arg) { // We found our key
    // Split the key-value pair (e.g. 'port=80' => ['port', '80'])
@@ -36,4 +36,3 @@ function findParameterKey(key, argv, startAt=2) {
   return result
 }
 
-export default findArgvValue
